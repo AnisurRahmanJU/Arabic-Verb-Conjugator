@@ -1,0 +1,130 @@
+/* Global Dark Theme */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #121212;   /* Dark background */
+  color: #e0e0e0;             /* Light text */
+  font-family: Arial, sans-serif;
+  text-align: center;         /* ✅ সবকিছু center */
+}
+
+/* Heading (only h1) */
+h1 {
+  font-size: 36px;
+  font-family: 'Fredericka the Great', serif;
+  color: #ffffff;
+  text-shadow: 0px 0px 8px #00ffe5; /* glowing effect */
+  margin: 20px 0;
+}
+
+/* Input section */
+#inputfl1 {
+  background-color: #1e1e1e;
+  padding: 8px;
+  font-family: Lateef, NotoNaskhArabic, serif;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  color: #ffffff;
+}
+
+/* Dropdown */
+#dropdown, #fakalima, #aynkalima, #lamkalima, #lam2kalima {
+  margin: 4px;
+  font-family: Lateef, NotoNaskhArabic;
+  font-size: 22px;
+  height: 36px;
+  width: 55px;
+  background: #2b2b2b;
+  color: #00ffe5;  /* Arabic highlight */
+  border: 1px solid #555;
+  border-radius: 4px;
+}
+
+/* Button */
+#makebtn {
+  width: 120px;
+  background-color: #6200ea;
+  color: #ffffff;
+  padding: 8px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+#makebtn:hover {
+  cursor: pointer;
+  background-color: #3700b3;
+}
+
+/* Result Text */
+#result {
+  background-color: #222;
+  padding: 6px;
+  color: #ff4081;
+  border-radius: 4px;
+}
+
+/* Table */
+table {
+  width: 90%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  background: #1c1c1c;
+  color: #ffffff;
+  text-align: center;
+}
+th, td {
+  border: 1px solid #444;
+  padding: 8px;
+}
+th {
+  background-color: #333;
+  color: #00ffe5; /* Arabic highlight */
+}
+tr:nth-child(even) {
+  background-color: #2a2a2a;
+}
+
+/* Arabic Highlight */
+.ism-file, td, #main-fial {
+  font-family: Lateef, NotoNaskhArabic;
+  font-size: 28px;
+  color: #00ffe5;   /* glowing Arabic text */
+  text-shadow: 0px 0px 6px #00ffe5;
+}
+
+/* Footer */
+#futter-div {
+  width: 80%;
+  background-color: #333;
+  text-align: center;
+  margin: auto;
+  color: #ffffff;
+  padding: 8px;
+  border-radius: 4px;
+}
+h6 { color: #ccc; }
+
+/* ✅ Left, Center, Right alignment fix */
+.uper-div {
+  margin: auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;  /* left - center - right */
+  align-items: center;
+}
+
+#lowdiv {
+  text-align: left;   /* اسم فاعل, اسم مفعول, مصدر */
+}
+
+#main-fial {
+  text-align: center; /* فعل */
+}
+
+#lowdiv2 {
+  text-align: right;  /* مادة, اسم آلة, اسم ظرف */
+}
