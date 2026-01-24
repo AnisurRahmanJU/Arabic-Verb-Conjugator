@@ -1,141 +1,164 @@
-/* Super White - Smart Arabic RTL Order */
+/* Smart White - Arabic RTL Logic */
 :root {
   --primary-blue: #1a73e8;
-  --border-light: #e0e4e8;
-  --text-main: #202124;
-  --bg-body: #ffffff;
+  --border-light: #dadce0;
   --bg-shade: #f8f9fa;
+  --text-dark: #202124;
 }
 
 html, body {
   margin: 0;
   padding: 0;
-  background-color: var(--bg-body);
-  color: var(--text-main);
+  background-color: #ffffff;
+  color: var(--text-dark);
   font-family: 'Segoe UI', Roboto, sans-serif;
   text-align: center;
-  direction: ltr; /* Keeping UI structure LTR to handle Flex-Reverse correctly */
 }
 
 h2 {
   font-size: 42px;
   font-weight: 800;
-  margin: 40px 0;
+  margin: 50px 0 20px 0;
+  color: var(--text-dark);
 }
 
-/* INPUT SECTION */
+/* 1. SELECTION BOX CONTAINER */
 .firstsect1 {
   background: #ffffff;
-  max-width: 950px;
+  max-width: 900px;
   margin: 0 auto 40px auto;
-  padding: 35px 20px;
+  padding: 40px;
   border: 1px solid var(--border-light);
   border-radius: 24px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
+/* Radio buttons container */
 #inputfl1 {
   background-color: var(--bg-shade);
   padding: 20px;
-  border-radius: 16px;
+  border-radius: 14px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  border: 1px solid var(--border-light);
-  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 20px;
 }
 
-/* THE RTL FIX: Orders boxes from Right-to-Left */
+/* 2. THE RTL INPUT BOXES (KEY FIX) */
 #inputFl {
   display: flex;
-  flex-direction: row-reverse; /* Starts from Right */
-  justify-content: center;    /* Centers the group of boxes */
+  flex-direction: row-reverse; /* Right to Left: Fa -> Ayn -> Lam -> Lam2 */
+  justify-content: center;
   align-items: center;
-  gap: 12px;
-  margin: 30px 0;
-  flex-wrap: nowrap !important; /* Keeps all 4 on one line */
-  width: 100%;
+  gap: 15px;
+  margin: 35px 0;
+  flex-wrap: nowrap !important; /* Forces one line always */
 }
 
-/* SELECT BOXES */
+/* Standard Box Styling */
 #fakalima, #aynkalima, #lamkalima, #lam2kalima {
   font-family: 'Lateef', serif;
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 900;
-  height: 60px;
-  width: 85px;
+  height: 65px;
+  width: 95px;
   color: var(--primary-blue);
+  background-color: #ffffff;
   border: 2px solid var(--border-light);
   border-radius: 12px;
   text-align: center;
-  background-color: #ffffff;
+  transition: all 0.2s ease;
   flex-shrink: 0;
 }
 
-#dropdown { 
-  width: 220px; 
-  font-size: 20px; 
-  height: 60px;
-  font-family: sans-serif;
+#fakalima:focus, #aynkalima:focus, #lamkalima:focus, #lam2kalima:focus {
+  border-color: var(--primary-blue);
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(26, 115, 232, 0.1);
+}
+
+/* Dropdown (Bab) */
+#dropdown {
+  width: 220px;
+  height: 65px;
+  font-size: 20px;
+  font-weight: 600;
   border: 2px solid var(--border-light);
   border-radius: 12px;
   color: var(--primary-blue);
+  padding: 0 10px;
 }
 
+/* Smart Make Button */
 #makebtn {
-  width: 250px;
-  height: 60px;
+  width: 260px;
+  height: 65px;
   background-color: var(--primary-blue);
   color: #ffffff;
-  font-size: 20px;
-  font-weight: 900;
+  font-size: 22px;
+  font-weight: 800;
   border: none;
   border-radius: 50px;
   cursor: pointer;
   box-shadow: 0 8px 20px rgba(26, 115, 232, 0.2);
+  transition: transform 0.2s, background 0.3s;
 }
+#makebtn:hover { background-color: #1557b0; transform: translateY(-2px); }
 
-/* MIDDLE FLOATING TEXT (فَعَلَ) */
+/* 3. MIDDLE FLOATING RESULT (No borders) */
 .uper-div {
   display: flex;
-  flex-direction: row-reverse; /* Arabic words order */
+  flex-direction: row-reverse; /* Result reads RTL */
   justify-content: center;
   gap: 30px;
-  margin: 40px auto;
+  margin: 50px auto;
 }
 
-#main-fial, .ism-file, #file, #maful, #masdar {
+.ism-file, #file, #maful, #masdar, #main-fial {
   font-family: 'Lateef', serif;
   font-size: 55px;
   font-weight: 900;
   color: #333;
+  border: none;
+  background: transparent;
 }
 
-/* --- THE TABLE: GLOBAL GIANT TEXT --- */
+#main-fial {
+  font-size: 75px;
+  color: var(--primary-blue);
+}
+
+/* 4. TABLE: GIANT BOLD TEXT */
 #tablediv {
   width: 98%;
   max-width: 1500px;
-  margin: 0 auto 60px auto;
+  margin: 0 auto 80px auto;
   overflow-x: auto;
   background: #ffffff;
-  border: 3px solid var(--border-light);
+  border: 2px solid var(--border-light);
   border-radius: 20px;
 }
 
 table {
   width: 100%;
-  min-width: 1400px; 
+  min-width: 1400px;
   border-collapse: collapse;
 }
 
-/* Forces ALL table text to be 48px and Bold */
-table th, table td, .namrow, .adad, .jins, .bold-1, td[id^="fa-"] {
+/* Universal giant text for all table content */
+table th, 
+table td, 
+.namrow, 
+.adad, 
+.jins, 
+.bold-1, 
+td[id^="fa-"] {
   font-family: 'Lateef', 'Segoe UI', serif !important;
   font-size: 48px !important; 
   font-weight: 900 !important;
+  padding: 25px 15px;
   white-space: nowrap;
-  padding: 20px 15px;
   text-align: center;
 }
 
@@ -146,18 +169,20 @@ th {
 
 .namrow, .adad, .jins {
   background-color: var(--bg-shade);
+  color: #444;
   border-right: 2px solid var(--border-light);
 }
 
 td[id^="fa-"] {
   color: var(--primary-blue) !important;
+  border-bottom: 1px solid #f1f3f4;
 }
 
 tr:hover td {
   background-color: #f1f8ff;
 }
 
-/* Big Blue Scrollbar */
-#tablediv::-webkit-scrollbar { height: 14px; }
+/* Custom Large Scrollbar */
+#tablediv::-webkit-scrollbar { height: 16px; }
 #tablediv::-webkit-scrollbar-track { background: #f1f1f1; }
 #tablediv::-webkit-scrollbar-thumb { background: var(--primary-blue); border-radius: 10px; }
