@@ -1,1 +1,1 @@
-# Easy-Arabic
+# Arabic Verb Conjugator
