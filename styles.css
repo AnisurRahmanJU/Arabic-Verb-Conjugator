@@ -1,4 +1,4 @@
-/* Super White - One-Line 4-Letter Logic */
+/* Super White - Smart Arabic RTL Order */
 :root {
   --primary-blue: #1a73e8;
   --border-light: #e0e4e8;
@@ -14,6 +14,7 @@ html, body {
   color: var(--text-main);
   font-family: 'Segoe UI', Roboto, sans-serif;
   text-align: center;
+  direction: ltr; /* Keeping UI structure LTR to handle Flex-Reverse correctly */
 }
 
 h2 {
@@ -25,7 +26,7 @@ h2 {
 /* INPUT SECTION */
 .firstsect1 {
   background: #ffffff;
-  max-width: 950px; /* Widened slightly for 4 letters */
+  max-width: 950px;
   margin: 0 auto 40px auto;
   padding: 35px 20px;
   border: 1px solid var(--border-light);
@@ -40,48 +41,46 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
   border: 1px solid var(--border-light);
-  flex-wrap: wrap; /* Allows radio buttons to wrap if needed */
+  flex-wrap: wrap;
 }
 
-/* THE FIX: ONE-LINE 4-LETTER DISPLAY */
+/* THE RTL FIX: Orders boxes from Right-to-Left */
 #inputFl {
   display: flex;
-  flex-direction: row-reverse; /* Arabic RTL Order */
-  justify-content: center;
+  flex-direction: row-reverse; /* Starts from Right */
+  justify-content: center;    /* Centers the group of boxes */
   align-items: center;
-  gap: 10px; /* Tightened gap to keep them together */
+  gap: 12px;
   margin: 30px 0;
-  flex-wrap: nowrap !important; /* STRICTLY PREVENTS LINE BREAK */
+  flex-wrap: nowrap !important; /* Keeps all 4 on one line */
   width: 100%;
-  overflow: visible;
 }
 
-/* SMART SELECT BOXES */
-#dropdown, #fakalima, #aynkalima, #lamkalima, #lam2kalima {
+/* SELECT BOXES */
+#fakalima, #aynkalima, #lamkalima, #lam2kalima {
   font-family: 'Lateef', serif;
   font-size: 32px;
   font-weight: 900;
   height: 60px;
-  width: 85px; /* Fixed width to prevent jumping */
+  width: 85px;
   color: var(--primary-blue);
   border: 2px solid var(--border-light);
   border-radius: 12px;
   text-align: center;
   background-color: #ffffff;
-  flex-shrink: 0; /* Prevents boxes from squishing too much */
+  flex-shrink: 0;
 }
 
-#dropdown { width: 220px; font-size: 20px; font-family: sans-serif; }
-
-/* Responsive adjustments for very small phones */
-@media (max-width: 480px) {
-  #fakalima, #aynkalima, #lamkalima, #lam2kalima {
-    width: 65px; /* Slightly smaller on tiny screens to stay on one line */
-    font-size: 26px;
-  }
-  #inputFl { gap: 5px; }
+#dropdown { 
+  width: 220px; 
+  font-size: 20px; 
+  height: 60px;
+  font-family: sans-serif;
+  border: 2px solid var(--border-light);
+  border-radius: 12px;
+  color: var(--primary-blue);
 }
 
 #makebtn {
@@ -100,10 +99,10 @@ h2 {
 /* MIDDLE FLOATING TEXT (فَعَلَ) */
 .uper-div {
   display: flex;
+  flex-direction: row-reverse; /* Arabic words order */
   justify-content: center;
   gap: 30px;
   margin: 40px auto;
-  flex-wrap: wrap;
 }
 
 #main-fial, .ism-file, #file, #maful, #masdar {
@@ -113,7 +112,7 @@ h2 {
   color: #333;
 }
 
-/* --- TABLE SECTION: GLOBAL GIANT TEXT --- */
+/* --- THE TABLE: GLOBAL GIANT TEXT --- */
 #tablediv {
   width: 98%;
   max-width: 1500px;
@@ -126,15 +125,15 @@ h2 {
 
 table {
   width: 100%;
-  min-width: 1400px;
+  min-width: 1400px; 
   border-collapse: collapse;
 }
 
+/* Forces ALL table text to be 48px and Bold */
 table th, table td, .namrow, .adad, .jins, .bold-1, td[id^="fa-"] {
   font-family: 'Lateef', 'Segoe UI', serif !important;
   font-size: 48px !important; 
   font-weight: 900 !important;
-  line-height: 1.2;
   white-space: nowrap;
   padding: 20px 15px;
   text-align: center;
@@ -158,7 +157,7 @@ tr:hover td {
   background-color: #f1f8ff;
 }
 
-/* Custom Scrollbar */
+/* Big Blue Scrollbar */
 #tablediv::-webkit-scrollbar { height: 14px; }
 #tablediv::-webkit-scrollbar-track { background: #f1f1f1; }
 #tablediv::-webkit-scrollbar-thumb { background: var(--primary-blue); border-radius: 10px; }
