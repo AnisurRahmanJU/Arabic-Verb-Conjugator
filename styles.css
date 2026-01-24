@@ -1,130 +1,164 @@
-/* Global Dark Theme */
+/* Super White - One-Line 4-Letter Logic */
+:root {
+  --primary-blue: #1a73e8;
+  --border-light: #e0e4e8;
+  --text-main: #202124;
+  --bg-body: #ffffff;
+  --bg-shade: #f8f9fa;
+}
+
 html, body {
   margin: 0;
   padding: 0;
-  background-color: #121212;   /* Dark background */
-  color: #e0e0e0;             /* Light text */
-  font-family: Arial, sans-serif;
-  text-align: center;         /* ✅ সবকিছু center */
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  text-align: center;
 }
 
-/* Heading (only h1) */
-h1 {
-  font-size: 36px;
-  font-family: 'Fredericka the Great', serif;
-  color: #ffffff;
-  text-shadow: 0px 0px 8px #00ffe5; /* glowing effect */
-  margin: 20px 0;
+h2 {
+  font-size: 42px;
+  font-weight: 800;
+  margin: 40px 0;
 }
 
-/* Input section */
+/* INPUT SECTION */
+.firstsect1 {
+  background: #ffffff;
+  max-width: 950px; /* Widened slightly for 4 letters */
+  margin: 0 auto 40px auto;
+  padding: 35px 20px;
+  border: 1px solid var(--border-light);
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+}
+
 #inputfl1 {
-  background-color: #1e1e1e;
-  padding: 8px;
-  font-family: Lateef, NotoNaskhArabic, serif;
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 12px;
-  border-radius: 6px;
-  color: #ffffff;
-}
-
-/* Dropdown */
-#dropdown, #fakalima, #aynkalima, #lamkalima, #lam2kalima {
-  margin: 4px;
-  font-family: Lateef, NotoNaskhArabic;
-  font-size: 22px;
-  height: 36px;
-  width: 55px;
-  background: #2b2b2b;
-  color: #00ffe5;  /* Arabic highlight */
-  border: 1px solid #555;
-  border-radius: 4px;
-}
-
-/* Button */
-#makebtn {
-  width: 120px;
-  background-color: #6200ea;
-  color: #ffffff;
-  padding: 8px;
-  font-weight: bold;
-  border: none;
-  border-radius: 4px;
-  margin-top: 10px;
-  transition: background 0.3s ease;
-}
-#makebtn:hover {
-  cursor: pointer;
-  background-color: #3700b3;
-}
-
-/* Result Text */
-#result {
-  background-color: #222;
-  padding: 6px;
-  color: #ff4081;
-  border-radius: 4px;
-}
-
-/* Table */
-table {
-  width: 90%;
-  border-collapse: collapse;
-  margin: 20px auto;
-  background: #1c1c1c;
-  color: #ffffff;
-  text-align: center;
-}
-th, td {
-  border: 1px solid #444;
-  padding: 8px;
-}
-th {
-  background-color: #333;
-  color: #00ffe5; /* Arabic highlight */
-}
-tr:nth-child(even) {
-  background-color: #2a2a2a;
-}
-
-/* Arabic Highlight */
-.ism-file, td, #main-fial {
-  font-family: Lateef, NotoNaskhArabic;
-  font-size: 28px;
-  color: #00ffe5;   /* glowing Arabic text */
-  text-shadow: 0px 0px 6px #00ffe5;
-}
-
-/* Footer */
-#futter-div {
-  width: 80%;
-  background-color: #333;
-  text-align: center;
-  margin: auto;
-  color: #ffffff;
-  padding: 8px;
-  border-radius: 4px;
-}
-h6 { color: #ccc; }
-
-/* ✅ Left, Center, Right alignment fix */
-.uper-div {
-  margin: auto;
-  width: 90%;
+  background-color: var(--bg-shade);
+  padding: 20px;
+  border-radius: 16px;
   display: flex;
-  justify-content: space-between;  /* left - center - right */
+  justify-content: center;
   align-items: center;
+  gap: 15px;
+  border: 1px solid var(--border-light);
+  flex-wrap: wrap; /* Allows radio buttons to wrap if needed */
 }
 
-#lowdiv {
-  text-align: left;   /* اسم فاعل, اسم مفعول, مصدر */
+/* THE FIX: ONE-LINE 4-LETTER DISPLAY */
+#inputFl {
+  display: flex;
+  flex-direction: row-reverse; /* Arabic RTL Order */
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Tightened gap to keep them together */
+  margin: 30px 0;
+  flex-wrap: nowrap !important; /* STRICTLY PREVENTS LINE BREAK */
+  width: 100%;
+  overflow: visible;
 }
 
-#main-fial {
-  text-align: center; /* فعل */
+/* SMART SELECT BOXES */
+#dropdown, #fakalima, #aynkalima, #lamkalima, #lam2kalima {
+  font-family: 'Lateef', serif;
+  font-size: 32px;
+  font-weight: 900;
+  height: 60px;
+  width: 85px; /* Fixed width to prevent jumping */
+  color: var(--primary-blue);
+  border: 2px solid var(--border-light);
+  border-radius: 12px;
+  text-align: center;
+  background-color: #ffffff;
+  flex-shrink: 0; /* Prevents boxes from squishing too much */
 }
 
-#lowdiv2 {
-  text-align: right;  /* مادة, اسم آلة, اسم ظرف */
+#dropdown { width: 220px; font-size: 20px; font-family: sans-serif; }
+
+/* Responsive adjustments for very small phones */
+@media (max-width: 480px) {
+  #fakalima, #aynkalima, #lamkalima, #lam2kalima {
+    width: 65px; /* Slightly smaller on tiny screens to stay on one line */
+    font-size: 26px;
+  }
+  #inputFl { gap: 5px; }
 }
+
+#makebtn {
+  width: 250px;
+  height: 60px;
+  background-color: var(--primary-blue);
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 900;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(26, 115, 232, 0.2);
+}
+
+/* MIDDLE FLOATING TEXT (فَعَلَ) */
+.uper-div {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px auto;
+  flex-wrap: wrap;
+}
+
+#main-fial, .ism-file, #file, #maful, #masdar {
+  font-family: 'Lateef', serif;
+  font-size: 55px;
+  font-weight: 900;
+  color: #333;
+}
+
+/* --- TABLE SECTION: GLOBAL GIANT TEXT --- */
+#tablediv {
+  width: 98%;
+  max-width: 1500px;
+  margin: 0 auto 60px auto;
+  overflow-x: auto;
+  background: #ffffff;
+  border: 3px solid var(--border-light);
+  border-radius: 20px;
+}
+
+table {
+  width: 100%;
+  min-width: 1400px;
+  border-collapse: collapse;
+}
+
+table th, table td, .namrow, .adad, .jins, .bold-1, td[id^="fa-"] {
+  font-family: 'Lateef', 'Segoe UI', serif !important;
+  font-size: 48px !important; 
+  font-weight: 900 !important;
+  line-height: 1.2;
+  white-space: nowrap;
+  padding: 20px 15px;
+  text-align: center;
+}
+
+th {
+  background-color: var(--bg-shade);
+  border-bottom: 5px solid var(--border-light);
+}
+
+.namrow, .adad, .jins {
+  background-color: var(--bg-shade);
+  border-right: 2px solid var(--border-light);
+}
+
+td[id^="fa-"] {
+  color: var(--primary-blue) !important;
+}
+
+tr:hover td {
+  background-color: #f1f8ff;
+}
+
+/* Custom Scrollbar */
+#tablediv::-webkit-scrollbar { height: 14px; }
+#tablediv::-webkit-scrollbar-track { background: #f1f1f1; }
+#tablediv::-webkit-scrollbar-thumb { background: var(--primary-blue); border-radius: 10px; }
