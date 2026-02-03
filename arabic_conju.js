@@ -1721,8 +1721,14 @@ else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !=
   
   
   else {
-      document.getElementById("result").innerText = "Weak roots - أ ي و or Double letters are not contained. Our Arabic Verb Conjugator can conjugate all arabic verb with 100% accuracy.";
+  document.getElementById("result").innerHTML =
+    'Weak roots - أ ي و or Double letters are not contained. ' +
+    'Our Arabic Verb Conjugator can conjugate all Arabic verbs with 100% accuracy.<br><br>' +
+    'You want to know advanced conjugation? You can download ' +
+    '<a href="https://play.google.com/store/apps/details?id=com.arbiotechbd.arabicverbconjugator" target="_blank">' +
+    'Arabic Verb Conjugator</a> App from Google Play.';
   }
+
 }
 
 
