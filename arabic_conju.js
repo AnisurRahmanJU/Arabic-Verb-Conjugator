@@ -27,9 +27,7 @@ function addNumbers() {
   var number3 = lamkalima.options[lamkalima.selectedIndex].value;
   var lam2kalima = document.getElementById("lam2kalima");
   var number4 = lam2kalima.options[lam2kalima.selectedIndex].value;
-  var number2 = document.getElementById("num2").value;
-  var number3 = document.getElementById("num3").value;
-  var number4 = document.getElementById("num4").value;
+  
   var dropdown = document.getElementById("dropdown");
   var bab = dropdown.options[dropdown.selectedIndex].value;
 
