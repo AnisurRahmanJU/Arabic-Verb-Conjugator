@@ -14,6 +14,28 @@ function showFields() {
   
 }
 
+function masdarFromInput(bab, f, a, l) {
+
+  // نصر / فتح / ضرب / سمع → فَعْلٌ
+  if (bab === "au" || bab === "aa" || bab === "ai" || bab === "ia") {
+    return `${f}َ${a}ْ${l}ٌ`;
+  }
+
+  // كرم → فَعَلٌ
+  if (bab === "uu") {
+    return `${f}َ${a}َ${l}ٌ`;
+  }
+
+  // حسب → فِعَالٌ
+  if (bab === "ii") {
+    return `${f}ِ${a}َ${l}َانٌ`; 
+    // তুমি চাইলে এটা "فِعَالٌ" pattern এ করো: `${f}ِ${a}َ${l}َالٌ`
+  }
+
+  // Default
+  return "—";
+}
+
 
 
 
@@ -116,7 +138,10 @@ function addNumbers() {
    
     document.getElementById("file").innerText =  "اسم فاعل: " + newpast01[1];
     document.getElementById("maful").innerText =  "اسم مَفعول: " + newpast01[2];
-    document.getElementById("masdar").innerText =  " مصدر: " + newpast01[3];
+    // document.getElementById("masdar").innerText =  " مصدر: " + newpast01[3];
+    let masdar = masdarFromInput(bab, number1, number2, number3);
+    document.getElementById("masdar").innerText = "مصدر: " + masdar;
+
     document.getElementById("mada").innerText =  " مَادة: " + newpast01[66];
     document.getElementById("ismala").innerText =  "اسم آلة: " + newpast01[67];
     document.getElementById("ismjarf").innerText =  "اسم ظرف: " + newpast01[68];
