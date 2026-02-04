@@ -138,10 +138,8 @@ function addNumbers() {
    
     document.getElementById("file").innerText =  "اسم فاعل: " + newpast01[1];
     document.getElementById("maful").innerText =  "اسم مَفعول: " + newpast01[2];
-    // document.getElementById("masdar").innerText =  " مصدر: " + newpast01[3];
     let masdar = masdarFromInput(bab, number1, number2, number3);
     document.getElementById("masdar").innerText = "مصدر: " + masdar;
-
     document.getElementById("mada").innerText =  " مَادة: " + newpast01[66];
     document.getElementById("ismala").innerText =  "اسم آلة: " + newpast01[67];
     document.getElementById("ismjarf").innerText =  "اسم ظرف: " + newpast01[68];
@@ -229,7 +227,8 @@ else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !=
  
   document.getElementById("file").innerText =  "اسم فاعل: " + newpast01[1];
   document.getElementById("maful").innerText =  "اسم مَفعول: " + newpast01[2];
-  document.getElementById("masdar").innerText =  " مصدر: " + newpast01[3];
+  let masdar = masdarFromInput(bab, number1, number2, number3);
+  document.getElementById("masdar").innerText = "مصدر: " + masdar;
   document.getElementById("mada").innerText =  " مَادة: " + newpast01[66];
   document.getElementById("ismala").innerText =  "اسم آلة: " + newpast01[67];
   document.getElementById("ismjarf").innerText =  "اسم ظرف: " + newpast01[68];
@@ -317,7 +316,8 @@ else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !=
  
   document.getElementById("file").innerText =  "اسم فاعل: " + newpast01[1];
   document.getElementById("maful").innerText =  "اسم مَفعول: " + newpast01[2];
-  document.getElementById("masdar").innerText =  " مصدر: " + newpast01[3];
+  let masdar = masdarFromInput(bab, number1, number2, number3);
+  document.getElementById("masdar").innerText = "مصدر: " + masdar;
   document.getElementById("mada").innerText =  " مَادة: " + newpast01[66];
   document.getElementById("ismala").innerText =  "اسم آلة: " + newpast01[67];
   document.getElementById("ismjarf").innerText =  "اسم ظرف: " + newpast01[68];
@@ -404,7 +404,8 @@ else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !=
  
   document.getElementById("file").innerText =  "اسم فاعل: " + newpast01[1];
   document.getElementById("maful").innerText =  "اسم مَفعول: " + newpast01[2];
-  document.getElementById("masdar").innerText =  " مصدر: " + newpast01[3];
+  let masdar = masdarFromInput(bab, number1, number2, number3);
+  document.getElementById("masdar").innerText = "مصدر: " + masdar;
   document.getElementById("mada").innerText =  " مَادة: " + newpast01[66];
   document.getElementById("ismala").innerText =  "اسم آلة: " + newpast01[67];
   document.getElementById("ismjarf").innerText =  "اسم ظرف: " + newpast01[68];
@@ -492,7 +493,8 @@ else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !=
  
   document.getElementById("file").innerText =  "صِفة مُشبة: " + newpast01[1];
   document.getElementById("maful").innerText =  "اسم مَفعول: " + newpast01[2];
-  document.getElementById("masdar").innerText =  " مصدر: " + newpast01[3];
+  let masdar = masdarFromInput(bab, number1, number2, number3);
+  document.getElementById("masdar").innerText = "مصدر: " + masdar;
   document.getElementById("mada").innerText =  " مَادة: " + newpast01[66];
   document.getElementById("ismala").innerText =  "اسم آلة: " + newpast01[67];
   document.getElementById("ismjarf").innerText =  "اسم ظرف: " + newpast01[68];
@@ -580,7 +582,8 @@ else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !=
  
   document.getElementById("file").innerText =  "اسم فاعل: " + newpast01[1];
   document.getElementById("maful").innerText =  "اسم مَفعول: " + newpast01[2];
-  document.getElementById("masdar").innerText =  " مصدر: " + newpast01[3];
+  let masdar = masdarFromInput(bab, number1, number2, number3);
+  document.getElementById("masdar").innerText = "مصدر: " + masdar;
   document.getElementById("mada").innerText =  " مَادة: " + newpast01[66];
   document.getElementById("ismala").innerText =  "اسم آلة: " + newpast01[67];
   document.getElementById("ismjarf").innerText =  "اسم ظرف: " + newpast01[68];
