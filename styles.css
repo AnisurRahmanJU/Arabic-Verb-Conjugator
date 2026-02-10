@@ -2,20 +2,20 @@
    ROOT VARIABLES
 ========================= */
 :root {
-  --bg-main: #121212;        /* page background */
-  --bg-card: #1f1f1f;        /* card / container */
-  --bg-soft: #2a2a2a;        /* input background */
-  --text-main: #ffffff;       /* main text */
-  --text-soft: #cfcfcf;       /* soft text */
-  --blue-1: #4dabf5;         /* gradient start */
-  --blue-2: #1e90ff;         /* gradient end */
-  --border: #444;             /* card / input border */
-  --row-alt: #1a1a1a;         /* table alternate rows */
-  --hover-row: #333;          /* table hover row */
+  --bg-main: #121212;
+  --bg-card: #1f1f1f;
+  --bg-soft: #2a2a2a;
+  --text-main: #ffffff;
+  --text-soft: #cfcfcf;
+  --blue-1: #4dabf5;
+  --blue-2: #1e90ff;
+  --border: #444;
+  --row-alt: #1a1a1a;
+  --hover-row: #333;
   --font-main: 'Lateef', 'Noto Naskh Arabic', serif;
-  --font-size-base: 1.4rem;   /* medium base text */
-  --font-size-card: 1.5rem;   /* medium card text */
-  --font-size-table: 1.4rem;  /* medium table text */
+  --font-size-base: 1.4rem;
+  --font-size-card: 1.5rem;
+  --font-size-table: 1.4rem;
 }
 
 /* =========================
@@ -38,7 +38,7 @@ html, body {
    PAGE WRAPPER
 ========================= */
 body > * {
-  max-width: 80%;          /* main content 80% */
+  max-width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -60,7 +60,7 @@ a:hover {
    HEADER
 ========================= */
 h1#heading {
-  text-align: center; /* header centered */
+  text-align: center;
   font-size: clamp(1.8rem, 5vw, 2.2rem);
   margin: 1rem 0;
   background: linear-gradient(90deg, var(--blue-1), var(--blue-2));
@@ -81,7 +81,7 @@ h1#heading {
   display: grid;
   gap: 1rem;
   justify-items: center;
-  width: 100%; /* wrapper limits to 80% already */
+  width: 100%;
 }
 
 /* RADIO + DROPDOWN CONTAINER */
@@ -168,6 +168,16 @@ select:focus {
   font-size: 1.3rem;
   direction: rtl;
   color: var(--text-main);
+}
+
+/* =========================
+   TABLE WRAPPER
+========================= */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  padding: 0 1rem; /* margin from edges on mobile */
+  box-sizing: border-box;
 }
 
 /* =========================
@@ -264,5 +274,9 @@ h6 {
 
   .ism-file {
     font-size: 1.2rem;
+  }
+
+  .table-wrapper {
+    padding: 0 0.8rem; /* mobile edge padding */
   }
 }
