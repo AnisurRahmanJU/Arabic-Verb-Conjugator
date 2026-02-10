@@ -174,7 +174,7 @@ select:focus {
    TABLE STYLING
 ========================= */
 table {
-  width: 100%;
+  width: 80%;
   border-collapse: separate;
   border-spacing: 0;
   background: var(--bg-card);
