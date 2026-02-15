@@ -27,20 +27,25 @@
   padding: 0;
 }
 
+/* =========================
+   BODY BASE
+========================= */
 html, body {
   font-family: var(--font-main);
   background: var(--bg-main);
   color: var(--text-main);
   font-size: var(--font-size-base);
-  width: 80%;          /* 80% of viewport */
-  margin: 0 auto;      /* center horizontally */
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 /* =========================
    PAGE WRAPPER
+   Desktop 80%
 ========================= */
 .page-wrapper {
-  width: 100%;         /* full width of body */
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -94,6 +99,9 @@ h1#heading {
   background: linear-gradient(135deg, #1a1a1a, #222222);
   border-radius: 12px;
   color: var(--text-main);
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 /* DROPDOWN + RADIO */
@@ -104,6 +112,11 @@ select, input[type="radio"] {
   border-radius: 10px;
   padding: 0.4rem 0.6rem;
   font-size: 1.3rem;
+  max-width: 100%;
+}
+
+select {
+  min-width: 120px;
 }
 
 select option {
@@ -124,6 +137,9 @@ select:focus {
   padding: 0.5rem;
   background: linear-gradient(135deg, var(--blue-2), #1a1a1a);
   border-radius: 12px;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /* BUTTON */
@@ -151,6 +167,7 @@ select:focus {
   text-align: center;
   color: var(--blue-1);
   font-weight: bold;
+  word-break: break-word;
 }
 
 /* ISM / MASDAR */
@@ -159,6 +176,7 @@ select:focus {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 0.6rem;
+  width: 100%;
 }
 
 .ism-file {
@@ -169,6 +187,7 @@ select:focus {
   font-size: 1.3rem;
   direction: rtl;
   color: var(--text-main);
+  width: 100%;
 }
 
 /* =========================
@@ -178,6 +197,7 @@ select:focus {
   width: 100%;
   overflow-x: auto;
   box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* =========================
@@ -185,6 +205,7 @@ select:focus {
 ========================= */
 table {
   width: 100%;
+  min-width: 700px; /* prevent crush */
   border-collapse: separate;
   border-spacing: 0;
   background: var(--bg-card);
@@ -199,6 +220,7 @@ th, td {
   padding: 0.4rem 0.7rem;
   text-align: center;
   border-bottom: 1px solid var(--border);
+  white-space: nowrap;
 }
 
 th {
@@ -247,11 +269,20 @@ h6 {
 
 /* =========================
    MOBILE
+   Mobile 100%
 ========================= */
 @media (max-width: 768px) {
+
+  /* wrapper full width */
   .page-wrapper {
-    width: 90%; /* 100% - 5% left & right */
-    padding: 0 0.5rem;
+    width: 100%;
+    margin: 0;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  #firstsect {
+    padding: 0.9rem;
   }
 
   .bold-1,
@@ -270,10 +301,13 @@ h6 {
 
   select {
     font-size: 1.2rem;
+    max-width: 120px;
   }
 
   #makebtn {
-    padding: 0.5rem 1.5rem;
+    width: 100%;
+    max-width: 260px;
+    padding: 0.6rem 1.5rem;
     font-size: 1.2rem;
   }
 
@@ -283,5 +317,23 @@ h6 {
 
   .table-wrapper {
     padding: 0;
+    width: 100%;
+  }
+
+  table {
+    min-width: 650px;
+  }
+}
+
+/* =========================
+   EXTRA SMALL MOBILE
+========================= */
+@media (max-width: 420px) {
+  select {
+    max-width: 105px;
+  }
+
+  table {
+    min-width: 600px;
   }
 }
