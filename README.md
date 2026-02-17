@@ -1,1 +1,1 @@
-# Arabic Verb Conjugator{ص}
+# Arabic Verb Conjugator - {ص}
