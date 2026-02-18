@@ -473,7 +473,7 @@ async function translateAllArabicFromTable() {
 // MAIN: Translate & save to localStorage then open english.html
 async function buildEnglishPage() {
   const btn = document.getElementById("makebtn");
-  if(btn){ btn.disabled=true; btn.innerText="..TRANSLATING"; }
+  if(btn){ btn.disabled=true; btn.innerText="...TRANSLATING"; }
 
   const englishMap = await translateAllArabicFromTable();
 
@@ -498,4 +498,5 @@ window.addEventListener("load", () => {
   };
 });
 </script>
+
 
