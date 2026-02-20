@@ -1127,7 +1127,7 @@ else if ((bab== "xf") && (number2!= number3 ))
 
 // bab انفعال shahi salim
 
-else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !== "أ" && number2 !=="و" && number2 !=="ي")  && (number3 !== "أ" && number3 !=="و" && number3 !=="ي") && (bab== "xg") && (number2!= number3 ))
+else if ((bab== "xg") && (number2!= number3 ))
 
 
 {
@@ -1216,7 +1216,7 @@ else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !=
 
 // bab افعلال shahi salim
 
-else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !== "أ" && number2 !=="و" && number2 !=="ي")  && (number3 !== "أ" && number3 !=="و" && number3 !=="ي") && (bab== "xh") && (number2!= number3 ))
+else if ((bab== "xh") && (number2!= number3 ))
 
 
 {
@@ -1305,7 +1305,7 @@ else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !=
 
 // bab افعيلال shahi salim
 
-else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !== "أ" && number2 !=="و" && number2 !=="ي")  && (number3 !== "أ" && number3 !=="و" && number3 !=="ي") && (bab== "xi") && (number2!= number3 ))
+else if ((bab== "xi") && (number2!= number3 ))
 
 
 {
@@ -1393,8 +1393,6 @@ else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !=
 } 
 
 // bab استفعل shahi salim
-
-//else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !== "أ" && number2 !=="و" && number2 !=="ي")  && (number3 !== "أ" && number3 !=="و" && number3 !=="ي") && (bab== "xj") && (number2!= number3 ))
 else if ((bab== "xj") && (number2!= number3 ))
 
 
@@ -1484,7 +1482,7 @@ else if ((bab== "xj") && (number2!= number3 ))
 
 // bab افعيعال shahi salim
 
-else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !== "أ" && number2 !=="و" && number2 !=="ي")  && (number3 !== "أ" && number3 !=="و" && number3 !=="ي") && (bab== "xk") && (number2!= number3 ))
+else if ((bab== "xk") && (number2!= number3 ))
 
 
 {
@@ -1573,7 +1571,7 @@ else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !=
 
 // bab افعوَّال shahi salim
 
-else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !== "أ" && number2 !=="و" && number2 !=="ي")  && (number3 !== "أ" && number3 !=="و" && number3 !=="ي") && (bab== "xl") && (number2!= number3 ))
+else if ((bab== "xl") && (number2!= number3 ))
 
 
 {
@@ -1660,9 +1658,9 @@ else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !=
   document.getElementById("result").innerText = "";
 } 
 
-// bab rubie salim 444444444444444 
+// bab rubie salim 
 
-else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !== "أ" && number2 !=="و" && number2 !=="ي")  && (number3 !== "أ" && number3 !=="و" && number3 !=="ي") && (number4 !== "أ" && number4 !=="و" && number4 !=="ي") && (bab== "va") && (number1!== number2 ))
+else if ((bab== "va") && (number1!== number2 ))
 
 
 {
@@ -1753,11 +1751,7 @@ else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !=
   
   else {
   document.getElementById("result").innerHTML =
-    'Weak roots - أ ي و or Double letters are not contained in this webpage.<br> ' +
-    'Our System can conjugate all Arabic verbs with 100% accuracy.<br>' +
-    'Do you want to know about advanced Arabic Verb Conjugation?<br>'+'So you can download ' +
-    '<a href="https://play.google.com/store/apps/details?id=com.arbiotechbd.arabicverbconjugator" target="_blank">' +
-    'Arabic Verb Conjugator</a> App from Google Play Store.';
+    'Please use right bab or right verb';
   }
 
 }
