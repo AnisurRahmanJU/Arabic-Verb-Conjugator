@@ -60,7 +60,7 @@ function addNumbers() {
   console.log(number2);
 
   // bab nasara salim
-  if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !== "أ" && number2 !=="و" && number2 !=="ي")  && (number3 !== "أ" && number3 !=="و" && number3 !=="ي") && (bab== "au") && (number2!= number3 ))
+  if ((bab== "au") && (number2!= number3 ))
  
   {
     // Perform the addition
@@ -150,7 +150,7 @@ function addNumbers() {
 
 
 // bab daraba salim
-else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !== "أ" && number2 !=="و" && number2 !=="ي")  && (number3 !== "أ" && number3 !=="و" && number3 !=="ي") && (bab== "ai") && (number2!= number3 ))
+else if ((bab== "ai") && (number2!= number3 ))
 
 
 {
@@ -240,7 +240,7 @@ else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !=
 
 //bab fatha salim
 
-else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !== "أ" && number2 !=="و" && number2 !=="ي")  && (number3 !== "أ" && number3 !=="و" && number3 !=="ي") && (bab== "aa") && (number2!= number3 ))
+else if ((bab== "aa") && (number2!= number3 ))
 
 
 {
@@ -329,8 +329,6 @@ else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !=
   
 
 // bab samia salim
-
-// else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !== "أ" && number2 !=="و" && number2 !=="ي")  && (number3 !== "أ" && number3 !=="و" && number3 !=="ي") && (bab== "ia") && (number2!= number3 ))
 else if ((bab == "ia") && (number2 != number3))
 
 {
@@ -419,7 +417,7 @@ else if ((bab == "ia") && (number2 != number3))
 
 // bab karuma salim
 
-else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !== "أ" && number2 !=="و" && number2 !=="ي")  && (number3 !== "أ" && number3 !=="و" && number3 !=="ي") && (bab== "uu") && (number2!= number3 ))
+else if ((bab== "uu") && (number2!= number3 ))
 
 
 {
@@ -509,7 +507,7 @@ else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !=
 
 // bab hasiba salim
 
-else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !== "أ" && number2 !=="و" && number2 !=="ي")  && (number3 !== "أ" && number3 !=="و" && number3 !=="ي") && (bab== "ii") && (number2!= number3 ))
+else if ((bab== "ii") && (number2!= number3 ))
 
 
 {
@@ -597,7 +595,7 @@ else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !=
 
 // bab ifal salim 
 
-else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !== "أ" && number2 !=="و" && number2 !=="ي")  && (number3 !== "أ" && number3 !=="و" && number3 !=="ي") && (bab== "xa") && (number2!= number3 ))
+else if ((bab== "xa") && (number2!= number3 ))
 
 
 {
@@ -684,7 +682,7 @@ else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !=
 
 // bab tafill salim
 
-else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !== "أ" && number2 !=="و" && number2 !=="ي")  && (number3 !== "أ" && number3 !=="و" && number3 !=="ي") && (bab== "xb") && (number2!= number3 ))
+else if ((bab== "xb") && (number2!= number3 ))
 
 
 {
@@ -773,7 +771,7 @@ else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !=
 
 // bab مفاعلة shahi salim
 
-else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !== "أ" && number2 !=="و" && number2 !=="ي")  && (number3 !== "أ" && number3 !=="و" && number3 !=="ي") && (bab== "xc") && (number2!= number3 ))
+else if ((bab== "xc") && (number2!= number3 ))
 
 
 {
@@ -862,7 +860,7 @@ else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !=
 
 // bab تَفَعَّلَ shahi salim
 
-else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !== "أ" && number2 !=="و" && number2 !=="ي")  && (number3 !== "أ" && number3 !=="و" && number3 !=="ي") && (bab== "xd") && (number2!= number3 ))
+else if ((bab== "xd") && (number2!= number3 ))
 
 
 {
@@ -951,7 +949,7 @@ else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !=
 
 // bab تفاعل shahi salim
 
-else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !== "أ" && number2 !=="و" && number2 !=="ي")  && (number3 !== "أ" && number3 !=="و" && number3 !=="ي") && (bab== "xe") && (number2!= number3 ))
+else if ((bab== "xe") && (number2!= number3 ))
 
 
 {
@@ -1040,7 +1038,7 @@ else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !=
 
 // bab افتعل shahi salim
 
-else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !== "أ" && number2 !=="و" && number2 !=="ي")  && (number3 !== "أ" && number3 !=="و" && number3 !=="ي") && (bab== "xf") && (number2!= number3 ))
+else if ((bab== "xf") && (number2!= number3 ))
 
 
 {
