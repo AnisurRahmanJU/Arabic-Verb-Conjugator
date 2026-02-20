@@ -60,7 +60,7 @@ function addNumbers() {
   console.log(number2);
 
   // bab nasara salim
-  if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !== "أ" && number2 !=="و" && number2 !=="ي")  && (number3 !== "أ" && number3 !=="و" && number3 !=="ي") && (bab== "au") && (number2!= number3 ))
+  if ((number1 !== "أ" || number1 !=="و" || number1 !=="ي") || (number2 !== "أ" || number2 !=="و" || number2 !=="ي")  || (number3 !== "أ" || number3 !=="و" || number3 !=="ي") || (bab== "au") || (number2!= number3 ))
  
   {
     // Perform the addition
@@ -149,7 +149,7 @@ function addNumbers() {
  
 
 // bab daraba salim
-else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !== "أ" && number2 !=="و" && number2 !=="ي")  && (number3 !== "أ" && number3 !=="و" && number3 !=="ي") && (bab== "ai") && (number2!= number3 ))
+else if ((number1 !== "أ" || number1 !=="و" || number1 !=="ي") || (number2 !== "أ" || number2 !=="و" || number2 !=="ي")  || (number3 !== "أ" || number3 !=="و" || number3 !=="ي") || (bab== "ai") || (number2!= number3 ))
 
 
 {
@@ -238,7 +238,7 @@ else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !=
 
 //bab fatha salim
 
-else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !== "أ" && number2 !=="و" && number2 !=="ي")  && (number3 !== "أ" && number3 !=="و" && number3 !=="ي") && (bab== "aa") && (number2!= number3 ))
+else if ((number1 !== "أ" || number1 !=="و" || number1 !=="ي") || (number2 !== "أ" || number2 !=="و" || number2 !=="ي")  || (number3 !== "أ" || number3 !=="و" || number3 !=="ي") || (bab== "aa") || (number2!= number3 ))
 
 
 {
@@ -326,7 +326,7 @@ else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !=
 } 
 // bab samia salim
 
-else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !== "أ" && number2 !=="و" && number2 !=="ي")  && (number3 !== "أ" && number3 !=="و" && number3 !=="ي") && (bab== "ia") && (number2!= number3 ))
+else if ((number1 !== "أ" || number1 !=="و" || number1 !=="ي")|| (number2 !== "أ" || number2 !=="و"|| number2 !=="ي")  || (number3 !== "أ" || number3 !=="و" || number3 !=="ي") || (bab== "ia")|| (number2!= number3 ))
 
 
 {
