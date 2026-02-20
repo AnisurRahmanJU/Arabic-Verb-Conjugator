@@ -15,28 +15,29 @@ function showFields() {
 }
 
 function masdarFromInput(bab, f, a, l) {
-
-  // نصر / فتح / ضرب / سمع → فَعْلٌ
-  if (bab === "au" || bab === "aa" || bab === "ai" || bab === "ia") {
-    return `${f}َ${a}ْ${l}ٌ`;
+  // Use logical checks for the "Babs"
+  
+  // 1. Nasara, Fataha, Daraba, Sami'a (Pattern: Fa'l)
+  if (["au", "aa", "ai", "ia"].includes(bab)) {
+    return f + "\u064E" + a + "\u0652" + l + "\u064C"; // f-Fatha, a-Sukun, l-Dammatan
   }
 
-  // كرم → فَعَلٌ
+  // 2. Karuma (Pattern: Fa'al)
   if (bab === "uu") {
-    return `${f}َ${a}َ${l}ٌ`;
+    return f + "\u064E" + a + "\u064E" + l + "\u064C"; // f-Fatha, a-Fatha, l-Dammatan
   }
 
-  // حسب → فِعَالٌ
+  // 3. Hasiba (Pattern: Fi'laan / Fi'aal)
   if (bab === "ii") {
-    return `${f}ِ${a}َ${l}َانٌ`; 
-    // তুমি চাইলে এটা "فِعَالٌ" pattern এ করো: `${f}ِ${a}َ${l}َالٌ`
+    // Current code returns: Fi'laan (فِعْلَان)
+    return f + "\u0650" + a + "\u0652" + l + "\u064E" + "ا" + "نٌ"; 
   }
 
-  // Default
   return "—";
 }
 
-
+// Example usage:
+// console.log(masdarFromInput("au", "ن", "ص", "ر")); // نَصْرٌ
 
 
 
