@@ -1396,7 +1396,8 @@ else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !=
 
 // bab استفعل shahi salim
 
-else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !== "أ" && number2 !=="و" && number2 !=="ي")  && (number3 !== "أ" && number3 !=="و" && number3 !=="ي") && (bab== "xj") && (number2!= number3 ))
+//else if ((number1 !== "أ" && number1 !=="و" && number1 !=="ي") && (number2 !== "أ" && number2 !=="و" && number2 !=="ي")  && (number3 !== "أ" && number3 !=="و" && number3 !=="ي") && (bab== "xj") && (number2!= number3 ))
+else if ((bab== "xj") && (number2!= number3 ))
 
 
 {
