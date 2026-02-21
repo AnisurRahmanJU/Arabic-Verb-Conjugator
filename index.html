@@ -433,8 +433,28 @@
   
 </html>
 
+<script>
+  function hideMajhulWithSila() {
+    // মাদি মাজহুল (15-28) এবং মুদারি মাজহুল (43-56) এর আইডি রেঞ্জ
+    const majhulIds = [
+      ...Array.from({length: 14}, (_, i) => `fa-${i + 15}`),
+      ...Array.from({length: 14}, (_, i) => `fa-${i + 43}`)
+    ];
 
+    majhulIds.forEach(id => {
+      const cell = document.getElementById(id);
+      if (cell) {
+        // যদি সেলের ভেতর 'صِلَة' শব্দটি থাকে তবে তা মুছে ফেলো
+        if (cell.innerText.includes("صِلَة")) {
+          cell.innerText = "";
+        }
+      }
+    });
+  }
 
-
-
-
+  // MAKE বাটনে ক্লিক করার পর ডাটা জেনারেট হতে সময় লাগে
+  // তাই ১০০০ মিলিসেকেন্ড (১ সেকেন্ড) বিরতি দিয়ে ফাংশনটি রান হবে
+  document.getElementById('makebtn').addEventListener('click', function() {
+    setTimeout(hideMajhulWithSila, 1000); 
+  });
+</script>
