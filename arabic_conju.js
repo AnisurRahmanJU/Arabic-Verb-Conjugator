@@ -1,32 +1,3 @@
-// ===== GLOBAL AUTO CLEANER =====
-(function() {
-
-    function cleanArabicText(text) {
-        if (!text) return text;
-
-        return text
-            .replace(/ صِلَة/g, "")
-            .replace(/ صِلة/g, "")
-            .replace(/ صِلَه/g, "")
-            .replace(/ صله/g, "")
-            .trim();
-    }
-
-    // Override innerText globally
-    const originalInnerText =
-        Object.getOwnPropertyDescriptor(Element.prototype, "innerText");
-
-    Object.defineProperty(Element.prototype, "innerText", {
-        set: function(value) {
-            originalInnerText.set.call(this, cleanArabicText(value));
-        },
-        get: function() {
-            return originalInnerText.get.call(this);
-        }
-    });
-
-})();
-
 
 function showFields() {
   var option3 = document.getElementById("option3");
